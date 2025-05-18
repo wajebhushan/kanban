@@ -6,6 +6,15 @@
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
+.custom-dialog {
+  width: 680px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
 
 h2 {
   margin-bottom: 16px;
@@ -74,12 +83,28 @@ label.required::after {
   margin-left: 4px;
 }
 
-
 .error {
   color: red;
   font-size: 0.875rem;
   margin-bottom: 12px;
 }
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
 
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  color: #888;
+}
 
-
+.close-btn:hover {
+  color: #e74c3c;
+}

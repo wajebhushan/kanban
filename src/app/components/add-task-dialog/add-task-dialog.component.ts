@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [FormsModule, CommonModule],
   templateUrl: './add-task-dialog.component.html',
-  styleUrl: './add-task-dialog.component.css'
+  styleUrl: './add-task-dialog.component.css',
 })
 export class AddTaskDialogComponent {
   dialogRef = inject(DialogRef);
@@ -17,11 +17,14 @@ export class AddTaskDialogComponent {
   status = 'To Do';
 
   submit() {
-    this.dialogRef.close({ title: this.title, description: this.description, status: this.status });
+    this.dialogRef.close({
+      title: this.title,
+      description: this.description,
+      status: this.status,
+    });
   }
 
   close() {
     this.dialogRef.close();
   }
-
 }

@@ -1,24 +1,25 @@
-<div class="dialog-container">
-  <h2>Create Task</h2>
-
+<div class="dialog-container custom-dialog">
+  <div class="dialog-header">
+    <h2>Create Task</h2>
+    <button class="close-btn" (click)="close()">✖</button>
+  </div>
   <form (ngSubmit)="submit()" #form="ngForm" class="task-form">
-
-    <!-- Title Field -->
     <label for="title" class="required">Title</label>
-<input
-  type="text"
-  id="title"
-  name="title"
-  [(ngModel)]="title"
-  required
-  #titleInput="ngModel"
-/>
-<div class="error" *ngIf="titleInput.invalid && (titleInput.dirty || titleInput.touched)">
-  Title is required.
-</div>
+    <input
+      type="text"
+      id="title"
+      name="title"
+      [(ngModel)]="title"
+      required
+      #titleInput="ngModel"
+    />
+    <div
+      class="error"
+      *ngIf="titleInput.invalid && (titleInput.dirty || titleInput.touched)"
+    >
+      Title is required.
+    </div>
 
-
-    <!-- Description Field -->
     <label for="description">Description</label>
     <input
       type="text"
@@ -27,7 +28,6 @@
       [(ngModel)]="description"
     />
 
-    <!-- Status Field -->
     <label for="status">Status</label>
     <select id="status" name="status" [(ngModel)]="status">
       <option>To Do</option>
@@ -35,9 +35,10 @@
       <option>Done</option>
     </select>
 
-    <!-- Actions -->
     <div class="form-actions">
-      <button type="submit" [disabled]="form.invalid" class="primary">Add</button>
+      <button type="submit" [disabled]="form.invalid" class="primary">
+        Add
+      </button>
       <button type="button" (click)="close()">Cancel</button>
     </div>
   </form>
