@@ -1,0 +1,70 @@
+.task-card {
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+}
+
+.task-card .card-header {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.task-card .card-header small {
+  font-weight: normal;
+  display: block;
+  color: #555;
+  font-size: 12px;
+}
+
+.task-card .progress-bar {
+  background: #f1f1f1;
+  height: 6px;
+  border-radius: 3px;
+  position: relative;
+  margin: 8px 0;
+}
+
+.task-card .progress-bar .progress-fill {
+  background: #3b82f6;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.task-card .progress-bar .progress-text {
+  position: absolute;
+  top: -18px;
+  right: 0;
+  font-size: 12px;
+  color: #555;
+}
+
+.task-card .meta {
+  font-size: 12px;
+  color: #444;
+}
+
+.task-card .meta .user-info {
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.task-card .meta .user-info .avatar {
+  background-color: #ddd;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+.task-card .meta .user-info .assignee {
+  font-weight: 500;
+}
+.task-card {
+  padding: 1rem;
+  margin: 0.5rem;
+  background: #eee;
+  border-radius: 4px;
+}

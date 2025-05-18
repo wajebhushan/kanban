@@ -1,0 +1,20 @@
+<section class="column" [ngClass]="statusClass(status())">
+  <div class="column-header" [ngClass]="statusHeaderClass(status())">
+    <span class="badge">{{ status() }}</span>
+  </div>
+
+  <div
+    class="task-list"
+    cdkDropList
+    [cdkDropListData]="tasks().tasks || []"
+    [id]="toListId(status())"
+    [cdkDropListConnectedTo]="connectedDropLists"
+    (cdkDropListDropped)="onDrop($event)"
+  >
+    @for (task of tasks().tasks; track task.id) {
+      <app-task-card cdkDrag [task]="task" />
+    } @empty {
+      <div>No Task!</div>
+    }
+  </div>
+</section>

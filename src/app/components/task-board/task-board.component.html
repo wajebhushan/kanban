@@ -1,0 +1,17 @@
+<div class="kanban-board">
+  <div class="kanban-header">
+    <button class="add-task-btn" (click)="openCreateTaskDialog()">
+      + Add Task
+    </button>
+  </div>
+
+  <div class="kanban-columns">
+    @for (list of tasks(); track $index) {
+    <app-column-board
+      [status]="list.status"
+      [tasks]="list"
+      [allTasks]="tasks()"
+    />
+    }
+  </div>
+</div>
