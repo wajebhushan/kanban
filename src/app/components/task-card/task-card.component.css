@@ -63,8 +63,15 @@
   font-weight: 500;
 }
 .task-card {
+  background: white;
+  border-radius: 8px;
   padding: 1rem;
   margin: 0.5rem;
-  background: #eee;
-  border-radius: 4px;
+  font-size: 14px;
+  transition: box-shadow 0.3s ease;
 }
+
+.task-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+

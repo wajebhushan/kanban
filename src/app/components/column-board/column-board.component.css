@@ -42,8 +42,12 @@
   justify-content: center;
   align-items: center;
   padding: 12px;
-  border-radius: 8px 8px 8px 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* 👈 added shadow */
+  z-index: 1;
+  position: relative;
 }
+
 
 .badge {
   font-size: 16px;
